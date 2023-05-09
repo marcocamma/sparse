@@ -12,7 +12,7 @@ Both functional and object oriented interfaces are available
 Functional programming example
     # generate 127 images, each with shape 13,10,17
     imgs1 = generate_random_imgs(shape=(127,13,10,17))
-    s1 = images_to_sparse_stream(imgs1
+    s1 = images_to_sparse_stream(imgs1)
     # generate more images
     imgs2 = generate_random_imgs(shape=(100,13,10,17))
     s2 = images_to_sparse_stream(imgs2)
@@ -26,7 +26,7 @@ Functional programming example
 Object-oriented interface
     # generate 127 images, each with shape 13,10,17
     imgs1 = generate_random_imgs(shape=(127,13,10,17))
-    s1 = from_images(imgs)
+    s1 = from_images(imgs1)
     s2 = s1[:30] # new SparseStream instance with only the first 30 images
     imgs2 = s2.to_images()
     s2.save("/tmp/todelete")
