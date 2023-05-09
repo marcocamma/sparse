@@ -38,6 +38,13 @@ Object-oriented interface
     s.to_images(slice_idx=slice(0,20,5))
 
 """
+
+__author__      = "Marco Cammarata (marco.cammarata@esrf.eu)
+__license__ = "GPL"
+__version__ = "0.1"
+__email__ = "marco.cammarata@esrf.eu"
+__credits__ = "Samuel Debionne (ESRF)"
+
 import numpy as np
 from collections import namedtuple
 
