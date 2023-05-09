@@ -3,6 +3,8 @@ Single file repository with possible implementation of sparse format
 
 This format allows to save in a space efficient manner multi-dimensional images with relatively sparse counts (i.e. many pixels are exactly zero)
 
+disclaimer: no attempt to be _fast_. Tried nevertheless to avoid copying.
+
 Module to convert images to sparse streamable objects
 Each image must be a >= 1D array
 Each stream is a named tuple with:
