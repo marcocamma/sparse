@@ -39,7 +39,7 @@ Object-oriented interface
 
 """
 
-__author__      = "Marco Cammarata (marco.cammarata@esrf.eu)
+__author__      = "Marco Cammarata (marco.cammarata@esrf.eu)"
 __license__ = "GPL"
 __version__ = "0.1"
 __email__ = "marco.cammarata@esrf.eu"
