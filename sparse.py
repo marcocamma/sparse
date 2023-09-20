@@ -294,12 +294,12 @@ def test4(shape=(200, 128, 256)):
     assert np.alltrue(imgs == imgs2)
 
 
-def test5(shape=(200, 128, 256)):
+def test5(shape=(200, 128, 256),fname="/tmp/sparse_saving_test.npy"):
     """test save/reload"""
     imgs = generate_random_imgs(shape=shape)
     stream = images_to_sparse_stream(imgs)
-    save_stream(stream, "/tmp/sparse_saving_text.npy")
-    stream2 = load_stream("/tmp/sparse_saving_text.npy")
+    save_stream(stream, fname)
+    stream2 = load_stream(fname)
     assert compare_streams(stream, stream2)
 
 
@@ -375,7 +375,7 @@ def test_all():
     for k in keys:
         f = globals()[k]
         if callable(f) and k.find("test") == 0 and k != "test_all":
-            print("testing", k)
+            print("testing", {k:10s}, f.__doc__)
             f()
 
 
