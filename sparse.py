@@ -375,7 +375,7 @@ def test_all():
     for k in keys:
         f = globals()[k]
         if callable(f) and k.find("test") == 0 and k != "test_all":
-            print("testing", {k:10s}, f.__doc__)
+            print(f"testing {k:10s}", f.__doc__[5:])
             f()
 
 
