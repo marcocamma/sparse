@@ -71,10 +71,7 @@ class sparse_stream(_sparse_stream):
 
     @property
     def size_one_image(self):
-        s = 1
-        for npix in self.shape:
-            s = s * npix
-        return s
+        return np.product(self.shape)
 
     @property
     def size(self):
