@@ -79,10 +79,12 @@ class sparse_stream(_sparse_stream):
 
 
 def ravel(imgs):
+    """ flatten each image, shape of return will be (nimages,npix_per_image) """
     return imgs.reshape((imgs.shape[0], -1))
 
 
 def unravel(imgs, shape):
+    """ un-flatten array, shape of return will be (nimages,npix1,npix2,...) """
     return imgs.reshape((-1,) + tuple(shape))
 
 
